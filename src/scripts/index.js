@@ -1,3 +1,6 @@
-import list from './modules/list';
+const menuButton = document.getElementById('main-nav-button');
+const navMenu = document.getElementById('main-nav');
 
-console.log(`Hello ${list[0]}`);
+menuButton.addEventListener('click', () => {
+  navMenu.toggleAttribute('data-visible');
+});
