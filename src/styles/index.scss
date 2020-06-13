@@ -6,28 +6,31 @@ body {
   font-size: clamp(0.8rem, 1.8vw, 1.3rem);
 }
 
-header,
-nav,
-main {
+.structure {
   margin: auto;
   max-width: 1000px;
 }
 
+$enough-space-breakpoint: 700px;
 nav {
   button {
     -webkit-appearance: none;
     align-items: center;
-    background: transparent;
+    background-color: palegreen;
     border: 0;
     display: flex;
+    justify-content: center;
     font-family: sans-serif;
-    font-size: 1rem;
-    line-height: 1;
     margin: 0;
-    padding: 0;
+    padding: 0.5rem 1rem;
+    width: 100%;
+
+    @media (min-width: $enough-space-breakpoint) {
+      display: none;
+    }
 
     svg {
-      margin-right: 0.5rem;
+      height: clamp(0.6rem, 1.6vw, 1.1rem);
     }
 
     &:hover {
@@ -35,6 +38,7 @@ nav {
     }
   }
 
+  $max-height: 400px; // menu open transition hack on non-explicit heights.
   ul {
     display: flex;
     flex-direction: column;
@@ -47,11 +51,22 @@ nav {
     transition: max-height linear 0.3s;
 
     &[data-visible] {
-      max-height: 400px;
+      max-height: $max-height;
+    }
+
+    @media (min-width: $enough-space-breakpoint) {
+      max-height: $max-height;
+      flex-direction: row;
     }
 
     li {
       border-bottom: 1px solid rgb(224, 224, 224);
+      text-align: center;
+
+      @media (min-width: $enough-space-breakpoint) {
+        width: 100%;
+        white-space: nowrap;
+      }
     }
   }
 
@@ -59,4 +74,49 @@ nav {
     display: block;
     padding: 0.5rem 1rem;
   }
+}
+
+/////////////////////
+h1 span,
+h2 span,
+h3 span {
+  font-size: 0.6em;
+}
+
+blockquote {
+  margin: 0;
+
+  p {
+    background: #eee;
+    border-radius: 5px;
+    padding: 15px;
+
+    &::before {
+      content: '\201C';
+    }
+
+    &::after {
+      content: '\201D';
+    }
+  }
+
+  footer {
+    font-size: 0.8em;
+    text-align: right;
+  }
+}
+
+// p {
+//   margin-bottom: 2rem;
+// }
+
+/////////////////////
+.booking-details {
+  border: 3px solid palegreen;
+  padding: 0.5rem 1rem;
+}
+
+.highlight {
+  border: 3px solid palegreen;
+  padding: 0.5rem 1rem;
 }
