@@ -1,4 +1,4 @@
-$large: 1200px;
+$large: 600px;
 
 img {
   display: block;
@@ -38,7 +38,7 @@ img {
 .gallery__img {
   scroll-snap-align: start;
   margin-bottom: 10px;
-  min-width: 100vw;
+  min-width: calc(100vw - 0.8rem);
   object-fit: cover;
 
   @media screen and (min-width: $large) {
