@@ -58,17 +58,17 @@ title: The Granary
 
 <div class="gallery-wrapper">
   <nav class="lil-nav">
-    <a href="#image-1">
-      <img class="lil-nav__img" src="/images/cottage/cottage01.jpg" alt="The Cottage from a distance." />
+  {% for filename, alt in granary %}
+   <a href="#image-{{loop.index}}">
+      <img class="lil-nav__img" src="{{ filename }}" alt="{{ alt }}" />
     </a>
-    <a href="#image-2">
-      <img class="lil-nav__img" src="/images/cottage/cottage02.jpg" alt="The Cottage front view." />
-    </a>
+  {% endfor %}
   </nav>
 
   <div class="gallery">
-    <img class="gallery__img" id="image-1" src="/images/cottage/cottage01.jpg" alt="The Cottage from a distance." />
-    <img class="gallery__img" id="image-2" src="/images/cottage/cottage02.jpg" alt="The Cottage front view." />
+  {% for filename, alt in granary %}
+      <img class="gallery__img" id="image-{{ loop.index }}" src="{{ filename }}" alt="{{ alt }}" />
+  {% endfor %}
   </div>
 </div>
 
