@@ -56,21 +56,7 @@ title: The Granary
   <li>No pets allowed.</li>
 </ul>
 
-<div class="gallery-wrapper">
-  <nav class="lil-nav">
-  {% for filename, alt in granary %}
-   <a href="#image-{{loop.index}}">
-      <img class="lil-nav__img" src="{{ filename }}" alt="{{ alt }}" />
-    </a>
-  {% endfor %}
-  </nav>
-
-  <div class="gallery">
-  {% for filename, alt in granary %}
-      <img class="gallery__img" id="image-{{ loop.index }}" src="{{ filename }}" alt="{{ alt }}" />
-  {% endfor %}
-  </div>
-</div>
+{% include "layouts/gallery.njk" %}
 
 <div class="booking-details">
   <p>Please see <a href="/bookings-and-contact/">Bookings and Contact</a> for details on how to book.
