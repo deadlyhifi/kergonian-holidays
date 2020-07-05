@@ -24,11 +24,11 @@
       Menu
     </button>
     <ul id="main-nav-menu">
-      <li><a href="/">Home</a></li>
-      <li><a href="/granary/">The Granary</a></li>
-      <li><a href="/cottage/">The Cottage</a></li>
-      <li><a href="/facilities/">Facilities</a></li>
-      <li><a href="/bookings-and-contact/">Bookings and Contact</a></li>
+      <li><a href="/"{% if name == "home" %} class="active"{% endif %}>Home</a></li>
+      <li><a href="/granary/"{% if name == "granary" %} class="active"{% endif %}>The Granary</a></li>
+      <li><a href="/cottage/"{% if name == "cottage" %} class="active"{% endif %}>The Cottage</a></li>
+      <li><a href="/facilities/"{% if name == "facilities" %} class="active"{% endif %}>Facilities</a></li>
+      <li><a href="/bookings-and-contact/"{% if name == "bookings" %} class="active"{% endif %}>Bookings and Contact</a></li>
     </ul>
   </nav>
 

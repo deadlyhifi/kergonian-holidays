@@ -65,7 +65,7 @@ nav.main-nav {
       max-height: $max-height;
       flex-direction: row;
       background-color: $thatGreen;
-      border-radius: 5px 5px 0 0;
+      border-radius: 1.2rem 1.2rem 0 0;
     }
 
     li {
@@ -84,6 +84,10 @@ nav.main-nav {
         text-decoration: none;
         color: $theText;
         text-shadow: 1px 1px 5px white;
+
+        &.active {
+          background-color: $thatGreenDarker;
+        }
       }
     }
   }
@@ -91,7 +95,8 @@ nav.main-nav {
 
 .hero {
   background: $theText;
-  min-height: 40vw;
+  height: 40vw;
+  max-height: 550px;
   border-radius: 0 0 1.2rem 1.2rem;
 
   background-size: cover;
