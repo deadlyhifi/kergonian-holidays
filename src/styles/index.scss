@@ -1,16 +1,20 @@
-@import "reset";
+@import "base";
 @import "gallery";
 
-body {
-  background-color: #fff;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: clamp(0.8rem, 1.8vw, 1.3rem);
-  margin: 0.8rem;
-}
+header {
+  a {
+    text-decoration: none;
+    color: $theText;
+  }
 
-.structure {
-  margin: auto;
-  max-width: 1000px;
+  h1 {
+    margin: 0 0 0.5rem 0;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1em;
+  }
 }
 
 $enough-space-for-nav-breakpoint: 700px;
@@ -18,8 +22,9 @@ nav.main-nav {
   button {
     -webkit-appearance: none;
     align-items: center;
-    background-color: palegreen;
-    border: 0;
+    background-color: $thatGreen;
+    border: none;
+    border-radius: 5px 5px 0 0;
     display: flex;
     justify-content: center;
     font-family: sans-serif;
@@ -59,6 +64,8 @@ nav.main-nav {
     @media (min-width: $enough-space-for-nav-breakpoint) {
       max-height: $max-height;
       flex-direction: row;
+      background-color: $thatGreen;
+      border-radius: 5px 5px 0 0;
     }
 
     li {
@@ -66,59 +73,31 @@ nav.main-nav {
       text-align: center;
 
       @media (min-width: $enough-space-for-nav-breakpoint) {
+        border: 0;
         width: 100%;
         white-space: nowrap;
       }
+
+      a {
+        display: block;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        color: $theText;
+        text-shadow: 1px 1px 5px white;
+      }
     }
   }
+}
 
-  a {
-    display: block;
-    padding: 0.5rem 1rem;
-  }
+.hero {
+  background: $theText;
+  min-height: 200px;
+  border-radius: 0 0 1.2rem 1.2rem;
 }
 
 /////////////////////
-h1 span,
-h2 span,
-h3 span {
-  font-size: 0.6em;
-}
-
-blockquote {
-  margin: 0;
-
-  p {
-    background: #eee;
-    border-radius: 5px;
-    padding: 15px;
-
-    &::before {
-      content: "\201C";
-    }
-
-    &::after {
-      content: "\201D";
-    }
-  }
-
-  footer {
-    font-size: 0.8em;
-    text-align: right;
-  }
-}
-
-// p {
-//   margin-bottom: 2rem;
-// }
-
-/////////////////////
-.booking-details {
-  border: 3px solid palegreen;
-  padding: 0.5rem 1rem;
-}
-
 .highlight {
-  border: 3px solid palegreen;
+  border: 3px solid $highlight;
   padding: 0.5rem 1rem;
+  text-align: center;
 }

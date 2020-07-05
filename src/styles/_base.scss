@@ -1,0 +1,71 @@
+$highlight: #0099cc;
+$thatGreen: #dde9c8;
+$theText: #243e3e;
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Chivo&isplay=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  background-color: #fdfdfd;
+  font-family: "Chivo", sans-serif;
+  font-size: clamp(0.8rem, 1.6vw, 1.2rem);
+  color: $theText;
+}
+
+a {
+  color: $highlight;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Barlow", sans-serif;
+  margin-top: 0;
+
+  span {
+    font-size: 0.6em;
+  }
+}
+
+blockquote {
+  margin: 0;
+
+  p {
+    background: #eee;
+    border-radius: 5px;
+    padding: 15px;
+    font-style: italic;
+
+    &::before {
+      content: "\201C";
+    }
+
+    &::after {
+      content: "\201D";
+    }
+  }
+
+  footer {
+    font-size: 0.8em;
+    text-align: right;
+  }
+}
+
+.structure {
+  margin: auto;
+  max-width: 1000px;
+
+  &.padded {
+    padding: 0.8rem;
+  }
+}
