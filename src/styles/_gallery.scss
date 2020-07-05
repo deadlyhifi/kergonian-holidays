@@ -9,7 +9,7 @@ img {
   overflow: hidden;
   height: 80vh;
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 3fr 1fr;
   grid-gap: 10px;
   margin-bottom: 1rem;
   border: 1px solid lightgrey;
@@ -26,25 +26,24 @@ img {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   display: flex;
+  align-items: center;
 
   @media screen and (min-width: $large) {
     display: block;
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-snap-type: y mandatory;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
 .gallery__img {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   margin-bottom: 10px;
-  min-width: calc(100vw - 0.8rem);
+  width: 100%;
   object-fit: cover;
-
-  @media screen and (min-width: $large) {
-    min-width: auto;
-    min-height: 80vh;
-  }
+  max-height: 80vw;
 }
 
 .lil-nav {
@@ -58,16 +57,16 @@ img {
     overflow-x: hidden;
     display: block;
     grid-row-start: auto;
+    margin: auto;
   }
 
   a {
     display: flex;
-    min-width: 45vw;
+    min-width: 40vw;
     margin-right: 10px;
 
     @media screen and (min-width: $large) {
       margin-bottom: 10px;
-      min-height: 200px;
       min-width: 100%;
     }
   }
