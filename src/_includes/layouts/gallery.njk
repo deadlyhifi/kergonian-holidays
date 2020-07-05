@@ -1,5 +1,5 @@
 <div class="gallery">
   {% for filename, alt in granary %}
-      <img class="gallery__img" id="image-{{ loop.index }}" src="{{ filename }}" alt="{{ alt }}" />
+      <img class="gallery__img" id="image-{{ loop.index }}" src="{{ filename }}" alt="{{ alt }}" loading="lazy" />
   {% endfor %}
 </div>
