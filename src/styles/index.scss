@@ -2,6 +2,12 @@
 @import "gallery";
 
 header {
+  background-image: url("/images/franceLand.svg");
+  background-size: 8rem;
+  background-repeat: no-repeat;
+  background-position: 0 -2px;
+  text-shadow: 0 0 4px white;
+
   a {
     text-decoration: none;
     color: $theText;
