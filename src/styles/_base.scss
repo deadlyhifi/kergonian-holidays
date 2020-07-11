@@ -5,6 +5,24 @@ $theText: #243e3e;
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Chivo&isplay=swap");
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(25px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -67,6 +85,10 @@ blockquote {
   max-width: 1000px;
 
   &.padded {
-    padding: 0.8rem;
+    padding: 1.2rem 0.8rem;
+  }
+
+  &.padded-main {
+    padding: 2.2rem 0.8rem;
   }
 }

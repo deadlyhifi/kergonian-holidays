@@ -19,15 +19,14 @@ header {
 
 $enough-space-for-nav-breakpoint: 700px;
 nav.main-nav {
+  font-size: clamp(1.2rem, 1.7vw, 1.6rem);
+
   button {
+    font-size: clamp(1.2rem, 1.7vw, 1.6rem);
     -webkit-appearance: none;
-    align-items: center;
     background-color: $thatGreen;
     border: none;
     border-radius: 5px 5px 0 0;
-    display: flex;
-    justify-content: center;
-    font-family: sans-serif;
     margin: 0;
     padding: 0.5rem 1rem;
     width: 100%;
@@ -37,7 +36,7 @@ nav.main-nav {
     }
 
     svg {
-      height: clamp(0.6rem, 1.6vw, 1.1rem);
+      height: clamp(0.8rem, 1.6vw, 1.3rem);
     }
 
     &:hover {
@@ -45,7 +44,7 @@ nav.main-nav {
     }
   }
 
-  $max-height: 180px; // menu open transition hack on non-explicit heights.
+  $max-height: 220px; // menu open transition hack on non-explicit heights.
   ul {
     display: flex;
     flex-direction: column;
@@ -66,6 +65,7 @@ nav.main-nav {
       flex-direction: row;
       background-color: $thatGreen;
       border-radius: 1.2rem 1.2rem 0 0;
+      box-shadow: 0 3px 6px 0 #89927a;
     }
 
     li {
@@ -76,6 +76,11 @@ nav.main-nav {
         border: 0;
         width: 100%;
         white-space: nowrap;
+        transition: all 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
 
       a {
@@ -98,6 +103,8 @@ nav.main-nav {
   height: 40vw;
   max-height: 550px;
   border-radius: 0 0 1.2rem 1.2rem;
+  box-shadow: 0 3px 6px 0 #89927a;
+  animation: fadeIn 1.2s;
 
   background-size: cover;
   background-position: center;
@@ -121,6 +128,11 @@ nav.main-nav {
   &.bookings {
     background-image: url("/images/granary/46.jpg");
   }
+}
+
+/////////////////////
+main {
+  animation: fadeIn, slideIn 0.6s;
 }
 
 /////////////////////
