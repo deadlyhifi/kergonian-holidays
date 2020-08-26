@@ -71,7 +71,7 @@ nav.main-nav {
       flex-direction: row;
       background-color: $thatGreen;
       border-radius: 1.2rem 1.2rem 0 0;
-      box-shadow: 0 3px 6px 0 #89927a;
+      box-shadow: 0 3px 4px 0 #c2c5be;
     }
 
     li {
@@ -107,9 +107,9 @@ nav.main-nav {
 .hero {
   background: $thatGreen;
   height: 60vw;
-  max-height: 550px;
+  max-height: 450px;
   border-radius: 0 0 1.2rem 1.2rem;
-  box-shadow: 0 3px 6px 0 #89927a;
+  box-shadow: 0 3px 4px 0 #c2c5be;
   animation: fadeIn 1.2s;
 
   background-size: cover;
