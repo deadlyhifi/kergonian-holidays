@@ -141,6 +141,28 @@ main {
   animation: fadeIn, slideIn 0.6s;
 }
 
+.footer-nav ul {
+  font-size: 0.8em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    text-align: center;
+  }
+
+  a.active {
+    text-decoration: none;
+
+    &::before {
+      content: "►";
+      font-size: 0.6em;
+      padding-inline-end: 6px;
+      vertical-align: middle;
+    }
+  }
+}
+
 /////////////////////
 .highlight {
   border: 3px solid $highlight;
