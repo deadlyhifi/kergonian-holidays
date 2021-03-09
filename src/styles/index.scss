@@ -1,8 +1,8 @@
-@import "base";
-@import "gallery";
+@import 'base';
+@import 'gallery';
 
 header {
-  background-image: url("/images/franceLand.svg");
+  background-image: url('/images/franceLand.svg');
   background-size: 8rem;
   background-repeat: no-repeat;
   background-position: 0 -2px;
@@ -116,23 +116,19 @@ nav.main-nav {
   background-position: center;
 
   &.home {
-    background-image: url("/images/granary/16.jpg");
-  }
-
-  &.granary {
-    background-image: url("/images/granary/46.jpg");
+    background-image: url('/images/cottage/02.jpg');
   }
 
   &.cottage {
-    background-image: url("/images/cottage/01.jpg");
+    background-image: url('/images/cottage/01.jpg');
   }
 
   &.facilities {
-    background-image: url("/images/facilities/17.jpg");
+    background-image: url('/images/facilities/17.jpg');
   }
 
   &.bookings {
-    background-image: url("/images/cottage/29.jpg");
+    background-image: url('/images/cottage/29.jpg');
   }
 }
 
@@ -155,7 +151,7 @@ main {
     text-decoration: none;
 
     &::before {
-      content: "►";
+      content: '►';
       font-size: 0.6em;
       padding-inline-end: 6px;
       vertical-align: middle;
